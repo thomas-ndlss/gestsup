@@ -25,6 +25,8 @@ RUN usermod -aG sudo gestsup
 
 RUN id gestsup
 
+RUN echo "gestsup ALL=(ALL) NOPASSWD:ALL" >> visudo
+
 EXPOSE 80 443
 
 USER gestsup
