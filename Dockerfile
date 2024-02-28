@@ -13,7 +13,7 @@ RUN apt install unzip -y
 RUN apt install ntp -y
 RUN apt install cron -y
 RUN apt install php libapache2-mod-php -y
-RUN apt install php-{common,curl,gd,imap,intl,ldap,mbstring,mysql,xml,zip} -y
+RUN apt install php-common php-curl php-gd php-imap php-intl php-ldap php-mbstring php-mysql php-xml php-zip -y
 
 WORKDIR /home/gestsup
 COPY --chown=gestsup:gestsup run-gestup-install.sh run-gestup-install.sh
