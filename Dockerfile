@@ -26,7 +26,7 @@ RUN usermod -aG sudo gestsup
 RUN id gestsup
 
 RUN echo "gestsup ALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/gestsup
-RUN cat visudo
+RUN cat /etc/sudoers 
 
 EXPOSE 80 443
 
