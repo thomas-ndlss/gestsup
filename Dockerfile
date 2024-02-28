@@ -7,6 +7,8 @@ RUN apt upgrade
 RUN apt install curl -y
 RUN apt install wget -y
 RUN apt install systemctl -y
+RUN apt install apache2 -y
+RUN apt install mariadb -y
 
 WORKDIR /home/gestsup
 COPY --chown=gestsup:gestsup run-gestup-install.sh run-gestup-install.sh
