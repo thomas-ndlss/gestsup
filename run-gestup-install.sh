@@ -11,7 +11,8 @@ if [ "$(whoami)" != "root" ]; then
     SUDO=sudo
 fi
 
-ip=`hostname -I | cut -f1 -d' '`
+#ip=`hostname -I | cut -f1 -d' '`
+ip="gestsup.railway.internal"
 
 #check gestsup system user
 if [ ! -d "/home/gestsup" ] 
