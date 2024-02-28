@@ -23,8 +23,10 @@ RUN chmod 777 run-gestup-install.sh
 
 RUN usermod -aG sudo gestsup
 
+RUN id gestsup
+
 EXPOSE 80 443
 
 USER gestsup
 
-CMD ["./run-gestup-install.sh"]
+CMD ["su gestsup", "./run-gestup-install.sh"]
