@@ -2,6 +2,9 @@ FROM debian:12.5
 
 RUN useradd -r -m -s /bin/bash gestsup
 
+RUN apt update
+RUN apt install curl -y
+
 WORKDIR /home/gestsup
 COPY --chown=gestsup:gestsup run-gestup-install.sh run-gestup-install.sh
 
