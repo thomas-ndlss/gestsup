@@ -17,4 +17,4 @@ EXPOSE 80 443
 
 USER gestsup
 
-CMD run-gestup-install.sh
+CMD ["./run-gestup-install.sh"]
