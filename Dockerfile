@@ -1,6 +1,8 @@
 FROM debian:12.5
 
-RUN useradd -r gestsup
+RUN useradd -r -m -s /bin/bash gestup
+
+WORKDIR /home/gestup
 
 RUN apt update
 RUN apt install curl -y && curl -s https://gestsup.fr/install.deb12.sh | bash
