@@ -1,6 +1,6 @@
 FROM debian:12.5
 
-RUN useradd -r -m -s /bin/bash gestup
+RUN useradd -r -m -s /bin/bash gestsup
 RUN ls /
 RUN ls /home
 RUN ls /home/gestsup
