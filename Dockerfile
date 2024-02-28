@@ -14,11 +14,14 @@ RUN apt install ntp -y
 RUN apt install cron -y
 RUN apt install php libapache2-mod-php -y
 RUN apt install php-common php-curl php-gd php-imap php-intl php-ldap php-mbstring php-mysql php-xml php-zip -y
+RUN apt install sudo -y
 
 WORKDIR /home/gestsup
 COPY --chown=gestsup:gestsup run-gestup-install.sh run-gestup-install.sh
 
 RUN chmod 777 run-gestup-install.sh
+
+RUN usermod -aG sudo gestsup
 
 EXPOSE 80 443
 
