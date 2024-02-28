@@ -34,7 +34,7 @@ echo "2 - Install prerequisites "
 echo -n "      > apache2 : "
 ${SUDO} -i apt install apache2 -y &> /dev/null
 ${SUDO} -i service apache2 start -y &> /dev/null
-if [ `systemctl is-active apache2` == "active" ]
+if [[ `systemctl is-active apache2` == "active" ]]
 then    
     echo -e "\e[32mOK\e[0m"
 else
@@ -43,7 +43,7 @@ fi
 echo -n "      > mariadb-server : "
 ${SUDO} -i apt install mariadb-server -y &> /dev/null
 ${SUDO} -i service mariadb start -y &> /dev/null
-if [ `systemctl is-active mariadb` == "active" ]
+if [[ `systemctl is-active mariadb` == "active" ]]
 then    
     echo -e "\e[32mOK\e[0m"
 else
