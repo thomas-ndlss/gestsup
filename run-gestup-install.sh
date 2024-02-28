@@ -12,7 +12,8 @@ if [ "$(whoami)" != "root" ]; then
 fi
 
 #ip=`hostname -I | cut -f1 -d' '`
-ip="gestsup.railway.internal"
+#ip="gestsup.railway.internal"
+ip="0.0.0.0"
 
 #check gestsup system user
 if [ ! -d "/home/gestsup" ] 
